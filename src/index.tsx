@@ -5,5 +5,9 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const Thing: FC<Props> = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <div className="mt-10 bg-yellow-100 p-5 rounded-md">
+      {children || 'Hello'}
+    </div>
+  );
 };
