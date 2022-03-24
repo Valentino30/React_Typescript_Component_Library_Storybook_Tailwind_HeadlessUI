@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Toggle, ToggleProps } from '../src';
 
-const meta: Meta = {
+export default {
   title: 'Toggle',
   component: Toggle,
   argTypes: {
@@ -19,12 +19,10 @@ const meta: Meta = {
   },
 };
 
-export default meta;
+const ToggleTemplate: Story<ToggleProps> = (args) => <Toggle {...args} />;
 
-const Template: Story<ToggleProps> = (args) => <Toggle {...args} />;
+export const Disabled = ToggleTemplate.bind({});
+export const Enabled = ToggleTemplate.bind({});
 
-export const Default = Template.bind({});
-
-Default.args = {
-  enabled: false,
-};
+Disabled.args = { enabled: false };
+Enabled.args = { enabled: true };
