@@ -1,7 +1,7 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Story } from '@storybook/react';
 
-import { Toggle, ToggleProps } from '../src';
+import { Toggle, ToggleProps } from '../..';
 
 export default {
   title: 'Toggle',
